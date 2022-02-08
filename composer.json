@@ -1,0 +1,22 @@
+{
+  "name": "vendor_name/paysera",
+  "description": "description",
+  "minimum-stability": "stable",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "kkubanek",
+      "email": "krzysztof.kubanek@gmail.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Coff\\TestAssignment\\": "src/"
+    }
+  },
+  "require": {
+    "phpunit/phpunit": "^9.5",
+    "garoevans/php-enum": "^1.2",
+    "ext-json": "*"
+  }
+}
