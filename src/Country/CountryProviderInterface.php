@@ -1,6 +1,6 @@
 <?php
 
-namespace Coff\TestAssignment\CountryProvider;
+namespace Coff\TestAssignment\Country;
 
 use Coff\TestAssignment\Enum\CountryIso3166Aplha2Enum;
 

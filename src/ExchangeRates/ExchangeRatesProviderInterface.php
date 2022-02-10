@@ -1,10 +1,10 @@
 <?php
 
-namespace Coff\TestAssignment\RatesProvider;
+namespace Coff\TestAssignment\ExchangeRates;
 
 use Coff\TestAssignment\Enum\CurrencyIso4217Enum;
 
-interface RatesProviderInterface
+interface ExchangeRatesProviderInterface
 {
     /**
      * @return $this

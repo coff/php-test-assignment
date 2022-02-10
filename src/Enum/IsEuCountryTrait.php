@@ -1,13 +1,11 @@
 <?php
 
-namespace Coff\TestAssignment\CountryProvider;
-
-use Coff\TestAssignment\Enum\CountryIso3166Aplha2Enum;
+namespace Coff\TestAssignment\Enum;
 
 trait IsEuCountryTrait
 {
     /**
-     * Statically defined list but shouldn't we think of some other solution in case of another "Brexit" ;)
+     * Statically defined list but shouldn't we think of some other solution in case of another "Brexit"??
      * @var array<int,CountryIso3166Aplha2Enum>
      */
     protected static $euCountries = [
@@ -44,12 +42,8 @@ trait IsEuCountryTrait
      * @param CountryIso3166Aplha2Enum $country
      * @return bool
      */
-    public function isEuCountry(CountryIso3166Aplha2Enum $country) : bool
+    public function isEuCountry() : bool
     {
-        if (in_array($country, self::$euCountries)) {
-            return true;
-        } else {
-            return false;
-        }
+        return in_array((string)$this, self::$euCountries, true);
     }
 }

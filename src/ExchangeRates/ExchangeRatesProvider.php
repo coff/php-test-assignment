@@ -1,14 +1,14 @@
 <?php
 
-namespace Coff\TestAssignment\RatesProvider;
+namespace Coff\TestAssignment\ExchangeRates;
 
 use Coff\TestAssignment\Enum\CurrencyIso4217Enum;
 
-class ExchangeRatesProvider implements RatesProviderInterface
+class ExchangeRatesProvider implements ExchangeRatesProviderInterface
 {
-    use RatesProviderTrait;
+    use ExchangeRatesProviderTrait;
 
-    protected $url = 'http://api.exchangeratesapi.io/v1/latest?access_key=53f96d003916a2287b70c9c9251de8dd';
+    private $url = 'http://api.exchangeratesapi.io/v1/latest?access_key=53f96d003916a2287b70c9c9251de8dd';
 
     /**
      * In case we had to switch to another currency exchange rates provider we just add another class implementing

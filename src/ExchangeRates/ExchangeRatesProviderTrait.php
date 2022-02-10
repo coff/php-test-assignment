@@ -1,10 +1,10 @@
 <?php
 
-namespace Coff\TestAssignment\RatesProvider;
+namespace Coff\TestAssignment\ExchangeRates;
 
 use Coff\TestAssignment\Enum\CurrencyIso4217Enum;
 
-trait RatesProviderTrait
+trait ExchangeRatesProviderTrait
 {
     protected $rates = [];
 
@@ -14,8 +14,8 @@ trait RatesProviderTrait
      */
     public function getRateByCurrency(CurrencyIso4217Enum $currency)
     {
-        if (false === isset($this->rates[(string)$currency])) {
-            throw new \Exception('Currency unlisted!');
+        if (isset($this->rates[(string)$currency]) === false) {
+            throw new \Exception('Currency not listed!');
         }
         return $this->rates[(string)$currency];
     }

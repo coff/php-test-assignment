@@ -1,6 +1,6 @@
 <?php
 
-namespace Coff\TestAssignment\CountryProvider;
+namespace Coff\TestAssignment\Country;
 
 use Coff\TestAssignment\Enum\CountryIso3166Aplha2Enum;
 
@@ -27,13 +27,13 @@ class BinListCountryProvider implements CountryProviderInterface
     {
         $result = file_get_contents('https://lookup.binlist.net/' .$this->bin);
 
-        if (false === $result) {
+        if ($result === false) {
             throw new \Exception('Unable to perform country lookup!');
         }
 
         $this->data = json_decode($result);
 
-        if (null === $this->data) {
+        if ($this->data === null) {
             throw new \Exception('Bad response from country lookup!');
         }
 
